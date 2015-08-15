@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <title>Join form excercise</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, minimun-scale=1.0, maximum-scale=2.0, user-scalable=yes">
+    <link rel="stylesheet" href="join_hw.css">
+    </head>
+    <body>
+    
+    <h1>회원가입</h1>
+    
+    <form action="" method="get">
+        <fieldset>
+            <legend>필수 입력 정보</legend>
+            <table>
+                <tr>
+                    <td class="col1"><label for="email">이메일</label></td>
+                    <td class="col2"><input id="email" type="email" placeholder=" 이메일을 입력해 주세요"></td>
+                </tr>
+                <tr>
+                    <td class="col1"><label for="pw">비밀번호</label></td>
+                    <td class="col2"><input id="pw" type="text" placeholder=" 비밀번호를 입력해 주세요"></td>
+                </tr>
+                <tr>
+                    <td class="col1"><label for="pwcheck">비밀번호 확인</label></td>
+                    <td class="col2"><input id="pwcheck" type="text" placeholder=" 비밀번호를 한번 더 입력해 주세요"></td>
+                </tr>            
+            </table>
+        </fieldset>
+        <br>
+        <fieldset>
+            <legend>선택 입력 정보</legend>
+        
+            <table>
+                <tr>
+                    <td class="col1"><label>전화번호</label></td>
+                    <td class="col2">
+                        <select>
+                            <option selected value="010">010</option>
+                            <option  value="02">02</option>
+                            <option  value="031">031</option>
+                            <option  value="032">032</option>
+                            <option  value="033">033</option>
+                            <option  value="070">070</option>
+                        </select>
+                        <input type="number" maxlength="4"> - 
+                        <input type="number" maxlength="4">
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col1"><label for="birthday">생년월일</label></td>
+                    <td class="col2"><input type="date" placeholder=" 비밀번호를 입력해 주세요"></td>
+                </tr>
+            </table>
+        </fieldset>    
+        <div id="buttons">
+            <input type="reset" name="reset" value="초기화">
+            <input type="submit" name="submit" value="입력완료">
+        </div>
+    </form>
+    
+
+    </body>
+
+</html>

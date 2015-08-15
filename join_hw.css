@@ -8,19 +8,6 @@ td{
 padding-bottom: 10px;    
 }
 
-input[type="email"] {
-    min-width: 200px;
-}
-
-input[type="text"] {
-    min-width: 200px;
-}
-
-input[type="number"] {
-    max-width: 50px;
-}
-
-
 #buttons{
 margin-top: 10px;      
 }

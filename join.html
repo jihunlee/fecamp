@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="XCompatible" content="IE=edge">
+        <title>Sample Document</title>
+        <meta charset="utf-8">
+    </head>
+    <body>
+<h1>회원 가입 입력 폼 만들기</h1>
+    <p>필수정보</p>
+        <ul>
+            <li>이메일</li>
+            <li>패스워드/패스워드 확인</li>
+        </ul>
+    <p>선택정보</p>
+        <ul>
+            <li>전화번호</li>
+            <li>생년월일</li>
+        </ul>
+<br>
+<br>
+<br>
+<br>
+        
+        
+<form action="" method="post">
+    <fieldset>
+        <legend>회원가입</legend>
+        <p>필수정보</p>
+        <p><label>Email <input type="email" name="email" placeholder=" enter Email"></label></p>
+        <p><label>Password <input type="text" name="pw" placeholder=" enter password"></label></p>
+        <p><label for="pwconfirm">Confirm Password</label> <input type="text" id="pwconfirm" name="pwconfirm" placeholder=" re-enter password"></p>
+        <br>
+        <br>
+        <p>선택정보</p>
+        <p>Phone Number 
+            <select name="phonenumber">
+                <option value="010">010</option>
+                <option value="02">02</option>
+                <option value="031">031</option>
+                <option value="032">032</option>
+                <option value="033">033</option>
+            </select> <input type="text" size="6" maxlength="4"> - <input type="text" size="6" maxlength="4"></p>
+        <p>Birthday <input type="date" name="birthday"> </p>
+        <p><button type="reset" name="reset" value="reset">RESET</button></p>
+        <p><button type="submit" name="submit" value="submit">SUBMIT</button></p>
+    </fieldset>   
+</form>
+    
+   
+    
+        
+</section>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        
+        
+        
+        
+        
+        
+    </body>
+</html>

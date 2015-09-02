@@ -13,7 +13,7 @@
     }
         
     .box{
-        width:320px;
+        width:100%;
         height: 100px;
         background-color: #000;
     }
@@ -27,8 +27,8 @@
     </style>
     
     
-    <body>
-        <div class="box"></div>
+    <body onclick="alert(document.body.clientWidth);">
+        <div class="box" onclick="alert(this.offsetWidth);"></div>
         <div class="box half"></div>
     </body>
 </html>

@@ -7,8 +7,8 @@ var 수강생 = {
     개발자: true
 };
     
-function 원소(arg1, arg2) {
-    return arg1[arg2];   
+function 원소(배열명, 원소순서) {
+    return 배열명[원소순서];   
 }
     
     

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+    
+    <head>
+        <meta charset="utf-8">
+        <title>스크롤링 애니메이션</title>
+        <script src="http://code.jquery.com/jquery-2.1.4.min.js"></script>
+        <script>
+        jQuery(function($){    
+                function moveRight(){
+                    $('#box').animate({left:'200px'}, moveDown);
+                }
+                
+                function moveDown(){
+                     $('#box').animate({top: '200px'}, moveLeft);   
+                }
+                    
+                function moveLeft(){
+                    $('#box').animate({left:'0px'}, moveUp);
+                }
+                    
+                function moveUp(){
+                    $('#box').animate({top:'0px'}, moveRight);
+                }
+            //moveRight();
+            
+            $('button').on('click', function(event){
+               $('#box').stop(); 
+            });
+            
+            $('#box').on('mousedown', function(event){
+                var top = parseInt($(this).css('top')), left = parseInt($(this).css('left'));
+                var startx = event.pageX, starty = event.pageY;
+                var $box = $(this);
+                
+                event.preventDefault();
+                
+                $(document).on('mousemove.drag', function(event){
+                    var dx = event.pageX - startx, dy = event.pageY - starty;
+                    var newTop = top + dy, newLeft = left +dx;
+                    $box.css({top:newTop, left:newLeft});
+                });
+                $(document).on('mouseup.drag', function(event){
+                   $(this).off('mousemove.drag mouseup.drag'); 
+                });
+                
+            });
+            
+                
+        });
+        </script>
+        <style>
+        #box{
+            position: absolute;
+            top:0;
+            left:0;
+            width: 100px;
+            height: 100px;
+            background:green;
+        }
+        
+        button{
+            position: absolute;
+            left: 100px;
+            top:100px;
+        }
+            
+        </style>
+    </head>
+    <body>   
+            <div id="box"></div>
+            <button>Stop</button>
+    </body>
+</html>
